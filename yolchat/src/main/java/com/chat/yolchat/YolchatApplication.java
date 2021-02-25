@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class YolchatApplication {
 
 	@RequestMapping("/")
-	String home() {
+	String home()
+	{
+		System.out.println("테스트");
 		return "Hello World!";
 	}
 
