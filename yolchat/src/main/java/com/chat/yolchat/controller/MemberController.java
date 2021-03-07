@@ -1,14 +1,15 @@
-//package com.chat.yolchat.controller;
-//
-//import lombok.RequiredArgsConstructor;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.ui.Model;
-//import org.springframework.web.bind.annotation.GetMapping;
-//
-//@Controller
-//@RequiredArgsConstructor
-//public class MemberController {
-//
+package com.chat.yolchat.controller;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+// 내부용
+@Controller
+@RequiredArgsConstructor
+public class MemberController {
+
 //    @GetMapping("/members/new")
 //    public String createForm(Model model) {
 //        // Model은 Controller에서 view로 넘어갈때 데이터를 실어서 넘김.
@@ -17,4 +18,4 @@
 //        model.addAllAttributes("memberForm", new MemberForm());
 //        return "members/createMemberForm";
 //    }
-//}
+}
