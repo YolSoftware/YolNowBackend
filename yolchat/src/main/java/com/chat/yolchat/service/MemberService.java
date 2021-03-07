@@ -22,12 +22,15 @@ public class MemberService {
         return member.getId();
     }
 
+    public Member findById(long id)
+    {
+        return memberRepository.findOne(id);
+    }
+
     private void validateDuplicateMember(Member member) {
         List<Member> findMembers = memberRepository.findByName(member.getName());
         if(!findMembers.isEmpty()) {
             throw new IllegalStateException("Already exist member!");
         }
     }
-
-
 }

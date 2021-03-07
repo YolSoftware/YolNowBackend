@@ -1,13 +1,17 @@
 package com.chat.yolchat.api;
 
 import com.chat.yolchat.domain.Member;
+import com.chat.yolchat.repository.MemberRepository;
 import com.chat.yolchat.service.MemberService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
+
+// 외부용
 @RestController
 @RequiredArgsConstructor
 public class MemberApiController {
@@ -145,10 +149,16 @@ public class MemberApiController {
 //        private Long id;
 //        private String name;
 //    }
+    @PostMapping("/api/db_test") // post타입 url을 받음
+    public Member Db_test(@RequestBody @Valid CreateMemberRequest request)
+    {
+        return memberService.findById(request.id);
+    }
 
     @Data
     static class CreateMemberRequest {
         private String name;
+        private Long id;
     }
 
     // id값을 반환한다.
