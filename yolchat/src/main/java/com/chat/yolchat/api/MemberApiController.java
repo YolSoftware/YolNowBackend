@@ -13,7 +13,6 @@ import javax.validation.Valid;
 public class MemberApiController {
     private final MemberService memberService;
 
-
     @PostMapping("/api/members")
     public CreateMemberResponse saveMember(@RequestBody @Valid CreateMemberRequest request) {
 
@@ -49,11 +48,7 @@ public class MemberApiController {
 //
 //        return new UpdateMemberResponse(findMember.getId(), findMember.getName());
 //    }
-
-
-
-
-
+    
 
 
 //    // 회원을 등록하는 api 만듬.
